@@ -1,76 +1,77 @@
+Oui — je te fais une version **plus propre, plus pro, plus simple à lire**, et **directement prête à copier-coller** dans ton `README.md`.
+
+Copie-colle **tout** ce bloc :
+
 ````markdown
-# TP APP SAE — Application de gestion des SAÉ MMI
+# TP APP SAE
 
-## Présentation du projet
-
-**TP APP SAE** est une application full-stack développée dans le cadre du **TP noté de Développement Mobile** en **BUT MMI 3**.
-
-L’objectif de ce projet est de proposer une solution permettant de **centraliser, consulter, organiser et enrichir les SAÉ** du BUT MMI, en particulier celles des promotions **MMI2** et **MMI3**.  
-L’application a été pensée comme une **banque de données pédagogique et professionnelle**, pouvant servir à la fois :
-
-- de **source documentaire** pour les étudiants,
-- de **réserve de projets** pour les JPO,
-- de **base de consultation** pour des présentations,
-- et de **support d’archivage** des réalisations de SAÉ.
-
-Le projet repose sur une architecture **mobile + API REST**, avec :
-
-- un **frontend mobile/web en React Native / Expo**
-- un **backend Java Spring Boot**
-- une **base de données relationnelle**
-- une logique de gestion des **SAÉ**, **groupes**, **UE**, **images** et **relations associées**
-
----
+Application full-stack de gestion des **SAÉ du BUT MMI**, développée dans le cadre du **TP noté de Développement Mobile**.
 
 ## Auteurs
-
-Projet réalisé par :
 
 - **Luxchan VASANTHAN**
 - **Abeeschan KRISHNAKUMAR**
 
-Formation : **BUT MMI 3 — IUT MLV Promos : MMI3**  
-Ressource : **R6.03 — Développement Mobile**
+**Formation :** BUT MMI 3  
+**Ressource :** R6.03 — Développement Mobile  
+**IUT :** MLV Promos — MMI3
 
 ---
 
-## Contexte pédagogique
+## Présentation
 
-Les **SAÉ** occupent une place centrale dans la formation en BUT, car elles permettent de mettre les étudiants en situation de production réelle, en autonomie et en mode projet.
+Ce projet a pour objectif de **centraliser, consulter, organiser et valoriser les SAÉ** réalisées en BUT MMI, notamment pour les promotions **MMI2** et **MMI3**.
 
-Dans cette logique, le sujet proposé consiste à développer une application mobile capable de :
+L’application permet de constituer une véritable **base de données de projets étudiants**, utilisable pour :
 
-- **consulter les SAÉ existantes**
-- **ajouter de nouvelles SAÉ dans une base de données**
-- **historiser les projets**
-- **mettre en relation les SAÉ avec des groupes, des UE et des images**
-- **faciliter la valorisation des travaux étudiants**
+- la consultation pédagogique,
+- la valorisation des réalisations,
+- les journées portes ouvertes,
+- les présentations de projets,
+- l’archivage des SAÉ.
 
-Ce projet répond donc à un besoin de **structuration**, de **visualisation** et de **mise en valeur** des productions réalisées au sein du BUT MMI.
+Le projet repose sur une architecture **frontend / backend** avec une API REST et une base de données relationnelle.
+
+---
+
+## Démonstration en ligne
+
+### Frontend
+**Application web :**  
+👉 [https://tp-sae-mobile.vercel.app/](https://tp-sae-mobile.vercel.app/)
+
+### Backend
+**API REST :**  
+👉 [https://tp-sae-api.onrender.com](https://tp-sae-api.onrender.com)
+
+**Test API :**  
+👉 [https://tp-sae-api.onrender.com/api/test](https://tp-sae-api.onrender.com/api/test)
+
+> Le backend est hébergé sur Render en offre gratuite.  
+> Lors de la première requête après une période d’inactivité, le démarrage peut prendre quelques secondes.
 
 ---
 
 ## Objectifs du projet
 
-L’application a pour objectif de permettre :
+L’application a été conçue pour permettre :
 
 - la **consultation des SAÉ**
 - l’**ajout de nouvelles SAÉ**
-- la **gestion des groupes auteurs**
-- la **gestion des UE liées**
-- l’**association d’images à chaque SAÉ**
-- l’**organisation des données par année, semestre et domaine**
-- le **classement des SAÉ par note**
-- l’**affichage d’informations détaillées** pour chaque projet
-- la **mise en valeur statistique** des résultats
+- la **gestion des groupes**
+- la **gestion des UE**
+- l’**ajout d’images liées aux SAÉ**
+- l’**affichage détaillé des projets**
+- le **tri et le filtrage des SAÉ**
+- l’**exploitation statistique des notes et taux de réussite**
 
 ---
 
 ## Fonctionnalités principales
 
 ### Gestion des SAÉ
-- consultation de la liste des SAÉ
-- affichage détaillé d’une SAÉ
+- affichage de la liste des SAÉ
+- affichage détaillé d’une SAE
 - ajout d’une SAE complète
 - modification d’une SAE
 - tri par note
@@ -88,14 +89,14 @@ L’application a pour objectif de permettre :
 - liaison entre une UE et une SAE
 
 ### Gestion des images
-- ajout d’images liées à une SAE
-- affichage d’une galerie d’illustrations
+- ajout d’illustrations pour une SAE
+- affichage d’une galerie liée aux projets
 
 ### Statistiques
 - moyenne des notes
 - taux de réussite
-- exploitation des notes par groupes
-- valorisation des données du projet
+- valorisation des données par groupe
+- mise en avant des résultats du projet
 
 ---
 
@@ -112,13 +113,12 @@ L’application a pour objectif de permettre :
 - **Java**
 - **Spring Boot**
 - **Spring Data JPA**
-- **API REST**
 - **Hibernate**
+- **API REST**
 
 ### Base de données
 - **MySQL** en local pendant le développement
-- **H2** comme fallback pour l’hébergement
-- configuration compatible déploiement
+- **H2** comme solution de fallback pour l’hébergement
 
 ### Outils
 - **VS Code**
@@ -132,7 +132,7 @@ L’application a pour objectif de permettre :
 
 ## Architecture du projet
 
-Le dépôt est organisé sous forme de **monorepo** avec deux parties principales :
+Le dépôt est organisé sous forme de **monorepo** :
 
 ```text
 TP-SAE-MOBILE/
@@ -147,7 +147,8 @@ Le frontend gère :
 * l’interface utilisateur
 * la navigation
 * les appels API
-* la consultation et l’ajout des données
+* l’affichage des données
+* l’ajout et la modification des contenus
 
 ### Backend `saeapi`
 
@@ -172,29 +173,27 @@ Le projet repose sur plusieurs entités principales :
 * **GroupeSae**
 * **SaeUe**
 
-### Relations principales
+### Relations
 
 * une **SAE** peut être liée à plusieurs **UE**
 * une **SAE** peut être liée à plusieurs **images**
 * une **SAE** peut être liée à un ou plusieurs **groupes**
-* une relation **GroupeSae** permet de stocker une **note obtenue**
-* une relation **SaeUe** permet d’associer une UE à une SAE
+* **GroupeSae** permet d’enregistrer une note obtenue par groupe
+* **SaeUe** permet d’associer une UE à une SAE
 
-Cette structuration permet une application **plus réaliste, évolutive et professionnalisante**.
+Cette structure rend l’application plus réaliste, plus claire et plus évolutive.
 
 ---
 
 ## API REST
 
-Le backend expose une API REST permettant de manipuler toutes les ressources du projet.
+Le backend expose plusieurs routes REST.
 
-### Exemples de routes disponibles
-
-#### Test API
+### Test
 
 * `GET /api/test`
 
-#### SAÉ
+### SAÉ
 
 * `GET /api/saes`
 * `GET /api/saes/{id}`
@@ -202,29 +201,29 @@ Le backend expose une API REST permettant de manipuler toutes les ressources du 
 * `POST /api/saes`
 * `PUT /api/saes/{id}`
 
-#### Groupes
+### Groupes
 
 * `GET /api/groupes`
 * `POST /api/groupes`
 
-#### UE
+### UE
 
 * `GET /api/ues`
 * `POST /api/ues`
 
-#### Relations groupe / SAE
+### Groupe / SAE
 
 * `GET /api/groupe-saes`
 * `GET /api/groupe-saes/sae/{saeId}`
 * `POST /api/groupe-saes`
 
-#### Relations SAE / UE
+### SAE / UE
 
 * `GET /api/sae-ues`
 * `GET /api/sae-ues/sae/{saeId}`
 * `POST /api/sae-ues`
 
-#### Images
+### Images
 
 * `GET /api/images`
 * `GET /api/images/sae/{saeId}`
@@ -234,50 +233,37 @@ Le backend expose une API REST permettant de manipuler toutes les ressources du 
 
 ## Hébergement
 
-L’un des points forts du projet est qu’il a été pensé pour fonctionner **au-delà du développement local**, avec une logique de **déploiement réel**.
+### Backend sur Render
 
-### Backend hébergé
+Le backend Spring Boot a été déployé sur **Render**.
 
-Le backend Spring Boot est déployé sur **Render**.
+Le déploiement a nécessité :
 
-**URL backend :**
-`https://tp-sae-api.onrender.com`
+* une adaptation de la configuration serveur,
+* une gestion du port pour l’environnement cloud,
+* une conteneurisation avec **Docker**,
+* une configuration compatible production.
 
-**Test API :**
-`https://tp-sae-api.onrender.com/api/test`
+### Frontend sur Vercel
 
-Le déploiement du backend a nécessité :
+Le frontend web a été déployé sur **Vercel**.
 
-* une adaptation du projet pour le cloud
-* une configuration serveur compatible Render
-* une conteneurisation via **Docker**
-* une gestion du port via variable d’environnement
-* une configuration de base adaptée à la production
-
-### Frontend hébergé
-
-Le frontend React Native / Expo est prévu pour être déployé en version web sur **Vercel**.
-
-**URL frontend :**
-`[À ajouter ici]`
-
-Le frontend est configuré pour fonctionner avec l’URL du backend hébergé grâce à une variable d’environnement :
+Le frontend utilise une variable d’environnement pour communiquer avec le backend hébergé :
 
 ```env
 EXPO_PUBLIC_API_URL=https://tp-sae-api.onrender.com/api
 ```
 
-Ce choix permet :
+Cela permet de séparer proprement :
 
-* une meilleure séparation entre développement local et production
-* une architecture plus propre
-* une meilleure maintenabilité du projet
+* l’environnement local,
+* l’environnement de production.
 
 ---
 
 ## Installation en local
 
-### 1. Cloner le projet
+### 1. Cloner le dépôt
 
 ```bash
 git clone https://github.com/LuxchanV/TP-SAE-MOBILE.git
@@ -286,33 +272,27 @@ cd TP-SAE-MOBILE
 
 ---
 
-## Lancer le backend
-
-### Se placer dans le dossier backend
+## Lancer le backend en local
 
 ```bash
 cd saeapi
-```
-
-### Lancer l’application Spring Boot
-
-```bash
 ./mvnw spring-boot:run
 ```
 
 Sur Windows PowerShell :
 
 ```powershell
+cd saeapi
 .\mvnw spring-boot:run
 ```
 
-### URL locale du backend
+Backend local :
 
 ```text
 http://localhost:8080
 ```
 
-### Test local
+Test API local :
 
 ```text
 http://localhost:8080/api/test
@@ -320,27 +300,15 @@ http://localhost:8080/api/test
 
 ---
 
-## Lancer le frontend
-
-### Se placer dans le dossier frontend
+## Lancer le frontend en local
 
 ```bash
 cd sae-mobile
-```
-
-### Installer les dépendances
-
-```bash
 npm install
-```
-
-### Lancer le projet Expo
-
-```bash
 npx expo start
 ```
 
-### Lancer la version web
+Version web :
 
 ```bash
 npx expo start --web
@@ -348,9 +316,9 @@ npx expo start --web
 
 ---
 
-## Configuration API frontend
+## Configuration API du frontend
 
-Le frontend utilise Axios pour appeler l’API backend.
+Le frontend utilise Axios pour appeler l’API.
 
 Exemple de configuration :
 
@@ -362,119 +330,115 @@ const BASE_URL =
 Cela permet :
 
 * d’utiliser `localhost` en local
-* d’utiliser l’URL du backend hébergé en production
+* d’utiliser l’URL du backend déployé en production
 
 ---
 
 ## Déploiement
 
-### Déploiement du backend
+### Backend
 
-Le backend a été déployé sur **Render** à partir du dépôt GitHub.
+Le backend a été déployé via :
 
-Le service utilise :
+* **GitHub**
+* **Render**
+* **Docker**
 
-* un **Root Directory** dédié (`saeapi`)
-* un **Dockerfile**
-* une configuration compatible Render
-* une logique de build et de démarrage adaptée à Spring Boot
+### Frontend
 
-### Déploiement du frontend
+Le frontend a été déployé via :
 
-Le frontend est prévu pour être déployé sur **Vercel** avec :
-
-* `sae-mobile` comme dossier racine
-* une exportation web Expo
-* une variable d’environnement pointant vers le backend Render
+* **GitHub**
+* **Vercel**
+* **Expo Web Export**
 
 ---
 
-## Choix techniques et justification
+## Choix techniques
 
 ### Pourquoi React Native / Expo ?
 
-* développement mobile rapide
+* développement rapide
 * interface moderne
-* compatibilité mobile et web
+* test mobile et web
 * bonne ergonomie pour un projet pédagogique
 
 ### Pourquoi Spring Boot ?
 
-* architecture backend robuste
-* création rapide d’API REST
-* intégration simple avec JPA / Hibernate
+* architecture robuste
+* création simple d’une API REST
+* intégration efficace avec JPA / Hibernate
 * structure professionnelle
 
-### Pourquoi une API REST séparée ?
+### Pourquoi séparer frontend et backend ?
 
-* séparation frontend / backend
-* meilleure évolutivité
+* meilleure organisation du projet
 * déploiement indépendant
-* logique proche d’un vrai projet professionnel
+* architecture plus réaliste
+* maintenance facilitée
 
 ### Pourquoi héberger le projet ?
 
-* montrer que l’application fonctionne au-delà du local
-* valoriser une démarche plus professionnelle
-* démontrer la capacité à déployer un projet complet
+* montrer que l’application fonctionne réellement en ligne
+* valoriser une démarche professionnelle
+* prouver la capacité à déployer un projet complet
 
 ---
 
 ## Points forts du projet
 
 * architecture full-stack cohérente
-* application réellement exploitable
-* séparation claire entre frontend et backend
+* application exploitable en local et en ligne
 * API REST structurée
 * gestion de plusieurs entités liées
-* ajout de statistiques
-* préparation au déploiement
-* travail en binôme sur un projet concret
+* statistiques intégrées
+* séparation claire frontend / backend
+* projet professionnalisant
+* travail en binôme
 
 ---
 
 ## Difficultés rencontrées
 
-Au cours du projet, plusieurs difficultés ont dû être résolues :
+Au cours du projet, plusieurs difficultés ont été rencontrées :
 
 * configuration réseau entre mobile et backend local
-* gestion des appels API entre frontend et backend
-* organisation des relations entre SAÉ, groupes, UE et images
-* adaptation du projet à un environnement de déploiement
-* correction des erreurs de configuration
-* mise en cohérence entre les données locales et les données hébergées
+* connexion entre frontend et API REST
+* organisation des relations entre les entités
+* adaptation au déploiement cloud
+* gestion des différences entre environnement local et production
+* synchronisation entre données locales et données hébergées
 
 Ces difficultés ont permis de renforcer :
 
-* la compréhension du développement full-stack
-* la logique de déploiement
-* la gestion d’une application répartie sur plusieurs environnements
+* la compréhension du développement full-stack,
+* la logique de déploiement,
+* la gestion d’un projet réparti sur plusieurs environnements.
 
 ---
 
 ## Améliorations possibles
 
-Le projet peut encore être enrichi par :
+Le projet peut encore évoluer avec :
 
-* une meilleure interface statistique
-* l’ajout de graphiques
+* une interface statistiques plus avancée
+* des graphiques
 * une authentification utilisateur
-* une meilleure recherche multicritère
-* une base de données distante persistante en production
+* une recherche multicritère plus poussée
+* une base de données distante persistante
 * une interface d’administration
 
 ---
 
 ## Compétences mobilisées
 
-Ce projet a mobilisé plusieurs compétences du BUT MMI, notamment :
+Ce projet a mobilisé plusieurs compétences importantes du BUT MMI :
 
 * développement frontend
 * développement backend
-* structuration de données
-* mise en place d’une API
-* intégration mobile/web
-* gestion d’un projet full-stack
+* conception d’API
+* structuration de base de données
+* intégration mobile / web
 * débogage
 * déploiement
 * travail collaboratif
@@ -483,16 +447,16 @@ Ce projet a mobilisé plusieurs compétences du BUT MMI, notamment :
 
 ## Conclusion
 
-**TP APP SAE** est un projet complet de développement mobile et web orienté vers la **gestion, la valorisation et l’historisation des SAÉ du BUT MMI**.
+**TP APP SAE** est un projet complet de développement mobile et web orienté vers la **gestion, la consultation et la valorisation des SAÉ du BUT MMI**.
 
-Au-delà de la simple réalisation technique, ce projet met en avant :
+Au-delà de la réalisation technique, ce projet met en avant :
 
-* une démarche de structuration des données
-* une logique d’architecture full-stack
-* une mise en production réelle
-* une réflexion sur l’usage concret de l’application dans un contexte pédagogique
+* une architecture full-stack cohérente,
+* une logique de structuration des données,
+* une mise en ligne réelle,
+* une démarche professionnalisante.
 
-Il s’agit donc d’un projet à la fois **fonctionnel, évolutif et professionnalisant**, représentatif d’un travail de **BUT MMI 3**.
+Il s’agit d’un projet à la fois **fonctionnel, évolutif et valorisable**, représentatif d’un travail de **BUT MMI 3**.
 
 ---
 
@@ -500,6 +464,3 @@ Il s’agit donc d’un projet à la fois **fonctionnel, évolutif et profession
 
 **Luxchan VASANTHAN**
 **Abeeschan KRISHNAKUMAR**
-
-```
-```
