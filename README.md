@@ -1,6 +1,3 @@
-Oui — je te fais une version **plus propre, plus pro, plus simple à lire**, et **directement prête à copier-coller** dans ton `README.md`.
-
-Copie-colle **tout** ce bloc :
 
 ````markdown
 # TP APP SAE
@@ -463,4 +460,5 @@ Il s’agit d’un projet à la fois **fonctionnel, évolutif et valorisable**, 
 ## Auteurs
 
 **Luxchan VASANTHAN**
+
 **Abeeschan KRISHNAKUMAR**
