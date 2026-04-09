@@ -1,33 +1,23 @@
-HELP.md
+# Node / Expo
+node_modules/
+.expo/
+dist/
+web-build/
+npm-debug.log*
+
+# React Native / misc
+.DS_Store
+*.log
+
+# Java / Spring
 target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+*.class
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
+# IDE
+.idea/
 .vscode/
+
+# Local DB / env
+data/
+.env
+.env.*

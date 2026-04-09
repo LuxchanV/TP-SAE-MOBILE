@@ -8,14 +8,10 @@ import com.mmi.meaux.saeapi.entity.Ue;
 import java.util.List;
 
 public class SaeDetailDto {
-
     private Sae sae;
     private List<Ue> ues;
     private List<GroupeSae> groupes;
     private List<ImageSae> images;
-
-    public SaeDetailDto() {
-    }
 
     public Sae getSae() {
         return sae;
